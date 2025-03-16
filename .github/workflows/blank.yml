@@ -27,7 +27,7 @@ jobs:
 
       - name: A Goof Step
         id: goof
-        uses: dogeared/tj-action-goof@v1.3
+        uses: dogeared/tj-action-goof@v1.4
         with:
           who-to-greet: 'dogeared'
       - name: Get the output time
